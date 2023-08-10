@@ -1,0 +1,27 @@
+li{
+    line-height: 30px;
+}
+
+/* table */
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+  }
+
+  th, td {
+    border: 1px solid black;
+    padding: 8px;
+    text-align: left;
+  }
+  input{
+    border: none;
+  }
+  .input-box {
+    width: 25px;
+    height: 20px;
+    border: 1px solid black;
+    display: inline-block;
+    text-align: center;
+    margin-left: -5px;
+  }

@@ -1,0 +1,128 @@
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Form 14</title>
+    <link rel="stylesheet" type="text/css" href="style.css" />
+    <style>
+    .table-container {
+      width: 100px; 
+    }
+        table {
+          width: 100px;
+          border-collapse: collapse;
+          margin-bottom: 20px;
+        }
+    
+        input{
+            width: 120px;
+        }
+        th, td {
+          border: 1px solid black;
+          padding: 8px;
+          text-align: left;
+          width: 20px;
+        }
+    
+        button {
+          margin-bottom: 10px;
+        }
+      </style>
+
+    <script>
+        function addRow() {
+          var table = document.getElementById("data-table");
+          var newRow = table.insertRow(table.rows.length - 1); // Insert above the last row
+          var columns = ["donorId", "sampleId", "collectionDate", "personName", "recruitingSignature", "supplyDate", "artClinic", "registrationNo", "receiptAttached"];
+          
+          for (var i = 0; i < columns.length; i++) {
+            var cell = newRow.insertCell(i);
+            var input = document.createElement("input");
+            input.type = "text";
+            input.name = columns[i];
+            cell.appendChild(input);
+          }
+        }
+      </script>
+</head>
+<body>
+    <div style="text-align: center;">
+        <h3>FORM 14
+        </h3>
+        <h4>[See rule 13 (2) (i)]
+        </h4>
+        <h4>Record of use of Donor Gametes 
+        </h4>
+    </div>
+
+        <p>(A separate form to be used for each individual donor) AADHAR card no. to be entered
+        </p>
+        <div style="display: flex; gap: 300px;">
+            <p>Name of ART bank: 
+            </p>
+            <p>Registration no.</p>
+        </div>
+    </div>
+
+    <div>
+        <h4 style="text-align: center;">A. For Semen Donors
+        </h4>
+        <div class="table-container">
+
+        <table id="data-table">
+            <tr>
+              <th>Donor ID</th>
+              <th>Sample ID</th>
+              <th>Collection Date</th>
+              <th>Name of Person Recruiting</th>
+
+              <th>Signature</th>
+              <th>Supply Date</th>
+              <th>ART Clinic</th>
+              <th>Registration No.</th>
+              <th>Receipt Attached</th>
+            </tr>
+            <tr>
+              <td><input type="text" name="donorId"></td>
+              <td><input type="text" name="sampleId"></td>
+              <td><input type="text" name="collectionDate"></td>
+              <td><input type="text" name="personName"></td>
+              <td><input type="text" name="recruitingSignature"></td>
+              <td><input type="text" name="supplyDate"></td>
+              <td><input type="text" name="artClinic"></td>
+              <td><input type="text" name="registrationNo"></td>
+              <td><input type="text" name="receiptAttached"></td>
+            </tr>
+            <!-- Add two more rows for default -->
+            <tr>
+              <td><input type="text" name="donorId"></td>
+              <td><input type="text" name="sampleId"></td>
+              <td><input type="text" name="collectionDate"></td>
+              <td><input type="text" name="personName"></td>
+              <td><input type="text" name="recruitingSignature"></td>
+              <td><input type="text" name="supplyDate"></td>
+              <td><input type="text" name="artClinic"></td>
+              <td><input type="text" name="registrationNo"></td>
+              <td><input type="text" name="receiptAttached"></td>
+            </tr>
+            <tr>
+              <td><input type="text" name="donorId"></td>
+              <td><input type="text" name="sampleId"></td>
+              <td><input type="text" name="collectionDate"></td>
+              <td><input type="text" name="personName"></td>
+              <td><input type="text" name="recruitingSignature"></td>
+              <td><input type="text" name="supplyDate"></td>
+              <td><input type="text" name="artClinic"></td>
+              <td><input type="text" name="registrationNo"></td>
+              <td><input type="text" name="receiptAttached"></td>
+            </tr>
+            <!-- End of default rows -->
+          </table>
+          <button onclick="addRow()">Add Row</button>
+    </div>
+</div>
+
+
+</body>
+</html>

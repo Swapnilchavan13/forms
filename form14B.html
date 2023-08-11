@@ -1,10 +1,18 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Form 14 B</title>
+    <link rel="stylesheet" type="text/css" href="style.css" />
+    <style>
+        input {
+            width: 35px;
+        }
+    </style>
 </head>
+
 <body>
     <div style="text-align: center;">
         <h3>Form 14B
@@ -16,8 +24,136 @@
     </p>
     <h4> Patient name:
     </h4>
-    <h4> ID no.:
-    </h4>
-    
+    <h4> ID no.:</h4>
+
+    <div>
+        <table>
+            <tr>
+                <th colspan="2">Day 0<br>
+                    Date:<br>
+                    Time:<br>
+                    Sci.:<br>
+                    Dr.:<br>
+                </th>
+                <th colspan="3">Day 1<br>
+                    Date: <br>
+                    Sci:<br>
+                    Diss. Time:<br>
+                    Score Time:<br>
+                    Hrs.(from OPU):
+                </th>
+                <th colspan="3">Day 2<br>
+                    Date:<br>
+                    Sci:<br>
+                    Time:<br>
+                    Dr.:<br>
+                </th>
+                <th colspan="2">Day 3<br>
+                    Date:<br>
+                    Time:<br>
+                    Sci.:<br>
+                    Dr.:<br>
+                </th>
+                <th>Day 4<br>
+                    Date:<br>
+                    Time:<br>
+                    Sci.:<br>
+                    Dr.:<br>
+                </th>
+                <th>Day 5<br>
+                    Date:<br>
+                    Time:<br>
+                    Sci.:<br>
+                    Dr.:<br>
+                </th>
+                <th>
+                </th>
+                <th colspan="2" rowspan="2">Frozen Info.<br>
+                    <br>
+                    Date:<br>
+                    Time:<br>
+                    <br>
+                    <br>
+                    Method:<br>
+                    Slow / Vitri
+                </th>
+            </tr>
+
+            <th colspan="2">
+                Hyal. Time:<br>
+                Inject Time:
+            </th>
+            <th colspan="3">
+
+            </th>
+            <th colspan="3">
+                Sci:<br>
+                Sci:
+            </th>
+            <th colspan="2">
+
+            </th>
+
+            <th>
+
+            </th>
+            <th>
+
+            </th>
+            <th>
+
+            </th>
+            <th colspan="2">
+
+            </th>
+            <tr>
+                <td>Egg</td>
+                <td>Comm.</td>
+                <td>PN</td>
+                <td>PB</td>
+                <td>Comm.</td>
+                <td>Cell#</td>
+                <td>Grade</td>
+                <td>Frag %</td>
+                <td>Cell#</td>
+                <td>Grade</td>
+                <td></td>
+                <td>Grade</td>
+                <td>FATE</td>
+                <td>Cell#/Grade</td>
+                <td>Straw no</td>
+            </tr>
+            <tr>
+                <td><input type="text"></td>
+                <td><input type="text"></td>
+                <td><input type="text"></td>
+                <td><input type="text"></td>
+                <td><input type="text"></td>
+                <td><input type="text"></td>
+                <td><input type="text"></td>
+                <td><input type="text"></td>
+                <td><input type="text"></td>
+                <td><input type="text"></td>
+                <td><input type="text"></td>
+                <td><input type="text"></td>
+                <td><input type="text"></td>
+                <td><input type="text"></td>
+                <td><input type="text"></td>
+            </tr>
+
+            <script>
+                const table = document.querySelector('table');
+
+                for (let i = 0; i < 15; i++) {
+                    const newRow = document.createElement('tr');
+                    newRow.innerHTML = '<td><input type="text"></td>'.repeat(15);
+                    table.appendChild(newRow);
+                }
+            </script>
+        </table>
+
+    </div>
+
 </body>
+
 </html>
